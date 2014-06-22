@@ -98,18 +98,11 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 - tBodyGyroMean
 - tBodyGyroJerkMean
 
-###How to use run_analysis.R
-
-* The first three line of code download the data.
-* If you already have downloaded the data then set working directory to the place where data is downloaded and skip first step by commenting it.(Example if you have your data (UCI HAR Dataset folder) in Desktop then setwd("~/Desktop")
-* Then simply run the rest of the code in R.
-* The result will be tidydata set as demanded by project.
-
 ###Work performed to clean up the data (Script in run-analysis.R)
 
-1. The first task was to download the data in a sutable directory by `download.file` function. 
+1. The first task was to download the data in a suitable directory by `download.file` function. 
 2. Next, all the data is read by function `read.csv` with correct arguments that include skipping of some lines and giving variables names.
-3. The subjects,labels, features name and features data are in seperate files. Assumming all the data in different files are in correct order, we bind subject,labels and results in one dataset. This is repeated for both test and train dataset.
+3. The subjects, labels, features name and observations are in seperate files. Assumming all the data in different files are in correct order, we bind row wise subject, labels and observations in one dataset. This is repeated for both test and train dataset.
 4. Later both train and test data set  are `merged` into one dataframe.
 5. Further to extracts only the measurements on the `mean and standard deviation` we used the grep and subsetting function 
 6. Then to clean the variables and give it descriptive names:
