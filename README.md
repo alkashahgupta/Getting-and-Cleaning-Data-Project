@@ -18,7 +18,18 @@ This repository contain scripts for completeing the above project. R is a progra
 
 ###run_analysis.R 
 
-This file include the full script from downloading to creating a tidy dataset for analysis. The comments describe the step by step process too. For detail process please read the forth and fifth section of `CodeBook.md` file.
+This file include the full script from downloading to creating a tidy dataset for analysis. The comments describe the step by step process too. 
+
+##### How to use run_analysis.R
+
+* If you haven't yet downloaded the data then just run the 'run_analysis.R' script. It will download and create a tidy dataset too.
+* The first three line of code download the data.
+* If you already have downloaded the data then set working directory to the place where data is downloaded and skip first three line of code by commenting it.(Example if you have your data (UCI HAR Dataset folder) in Desktop then setwd("~/Desktop")
+* Then simply run the rest of the code in R.
+* The result will be tidydata set as demanded by project.
+
+For detail process please read the forth section of `CodeBook.md` file. 
+
 
 ###CodeBook.md
 
